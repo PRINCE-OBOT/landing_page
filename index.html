@@ -168,7 +168,29 @@
     </div>
     </div>
     <script>
+            let getName = prompt("Enter your name",'name')
+            
+            function getNameInfo(){
+            if(getName.toUpperCase() ==="PRINCE OBOT"){
+                alert('VERIFIED')
+            }
+            else{
+                alert('FAILED VERIFICATION')
+            }
+        }
+            getNameInfo()
 
+            let getPassword = prompt("Enter your password")
+            function getPasswordInfo(){
+                if(getPassword === '123456'){
+                    alert("COMPLETE VERIFICATION")
+                }
+                else{
+                    alert('INCOMPLETE VERIFICATION')
+                }
+            }
+            getPasswordInfo()
+            
     </script>
 </body>
 </html>
