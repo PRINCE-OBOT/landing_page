@@ -6,6 +6,7 @@
 :root{
     --cl-lightblue : #3882F6;
     --cl-darkblue :#1F2937;
+    --cl-lightgrey : #E5E7EB;
     --cl-white : white;
 
     --fw-bold : 900;
@@ -13,10 +14,14 @@
 
     --fs-big : 3rem;
     --fs-small : .8rem;
-    --fs-medium : 1.15rem;
+    --fs-medium : 1rem;
 
     --pd-big : 2rem 8rem;
+    --pd-x : 0 8rem;
+    --pd-y : 2.5rem 0;
+
 }
+
 @font-face {
     font-family: Roboto;
     src: url(../fonts/Roboto/Roboto-Bold.ttf);
@@ -27,11 +32,12 @@
     src: url(../fonts/Roboto/Roboto-Light.ttf);
     font-weight: var(--fw-light);
 }
+
 body{
     display: flex;
     flex-direction: column;
     padding: 0 8rem;
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
     font-size: var(--fs-medium);
     font-weight: var(--fw-light);
     color: var(--cl-white);
@@ -70,6 +76,7 @@ nav ul li a{
 main{
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 .website-description-article{
     display: flex;
@@ -132,4 +139,44 @@ main{
     height: 8rem;
     border-radius: .3rem;
     box-shadow: 2px 2px 3px rgb(14, 11, 11, 0.5);
+}
+.testimonial-article{
+    padding: var(--pd-big);
+    background: var(--cl-lightgrey);
+}
+.testimonial-article section{
+    padding: var(--pd-x);
+    font-weight: var(--fw-light);
+    font-style: italic;
+    color: var(--cl-darkblue);
+}
+.testimonial-article p{
+    padding: var(--pd-x);
+    color: var(--cl-darkblue);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-medium);
+    text-align: right;
+}
+.sign-up-product-article{
+    padding: var(--pd-big);
+}
+.sign-up-product-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--cl-lightblue);
+    padding: var(--pd-y);
+}
+.sign-up-product-section a{
+    text-decoration: none;
+    border: 0.1rem solid var(--cl-white);
+    color: var(--cl-white);
+    font-weight: var(--fw-bold);
+    padding: .4rem 1rem;
+    border-radius: .5rem;
+}
+footer{
+    text-align: center;
+    padding: var(--pd-y);
+    background: var(--cl-darkblue);
 }
